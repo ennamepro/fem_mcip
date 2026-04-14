@@ -1,0 +1,24 @@
+P actions make_etude
+P debug nodebug
+P memjob 2097152
+P memory_limit 2048.0
+P mode interactif
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P ncpus 1
+P nomjob RunCase_1_Stage_1
+P origine AsterStudy 0.11
+P rep_trav /tmp/user-10000
+P server localhost
+P studyid 6283-0001-user
+P time_limit 900.0
+P tpsjob 16
+P version share/aster
+A memjeveux 256.0
+A tpmax 900.0
+F comm ../round_specimen_a1_salome_comms/round_specimen_a1_salome_pattern.comm D  1
+F libr ../round_specimen_a1_salome_meds/round_specimen_a1_salome_gmsh_pattern.med D  20
+F libr ../round_specimen_a1_salome_rmeds/round_specimen_a1_salome_pattern.rmed R  80
+F libr ../round_specimen_a1_salome_txts/round_specimen_a1_salome_pattern.txt R  8
+F mess ../messages/message_pattern R  6
+R base ../base-stage1s/base-stage1_pattern R  0

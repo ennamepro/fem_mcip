@@ -1,0 +1,61 @@
+DEBUT(LANG='EN')
+
+
+mesh = LIRE_MAILLAGE(identifier='0:1',
+                     FORMAT='MED',
+                     UNITE=20)
+
+model = AFFE_MODELE(identifier='1:1',
+                    AFFE=_F(MODELISATION='3D',
+                            PHENOMENE='MECANIQUE',
+                            TOUT='OUI'),
+                    MAILLAGE=mesh)
+
+mater = DEFI_MATERIAU(identifier='2:1',
+                      ELAS=_F(E=205000.0,
+                              NU=0.3))
+
+fieldmat = AFFE_MATERIAU(identifier='3:1',
+                         AFFE=_F(MATER=(mater, ),
+                                 TOUT='OUI'),
+                         MODELE=model)
+
+boundary = AFFE_CHAR_MECA(identifier='4:1',
+                          DDL_IMPO=(_F(DX=0.0,
+                                       GROUP_MA=('X_min', )),
+                                    _F(DY=0.0,
+                                       GROUP_MA=('Y_0', )),
+                                    _F(DZ=0.0,
+                                       GROUP_MA=('Z_0', ))),
+                          MODELE=model)
+
+load0 = AFFE_CHAR_MECA(identifier='5:1',
+                       MODELE=model,
+                       PRES_REP=_F(GROUP_MA=('X_max', ),
+                                   PRES=-X.XX))
+
+reslin = MECA_STATIQUE(identifier='6:1',
+                       CHAM_MATER=fieldmat,
+                       EXCIT=(_F(CHARGE=boundary),
+                              _F(CHARGE=load0)),
+                       MODELE=model)
+
+reslin = CALC_CHAMP(identifier='7:1',
+                    reuse=reslin,
+                    CONTRAINTE=('SIGM_NOEU', ),
+                    CRITERES=('SIEQ_NOEU', ),
+                    RESULTAT=reslin)
+
+IMPR_RESU(identifier='8:1',
+          FORMAT='MED',
+          RESU=_F(RESULTAT=reslin),
+          UNITE=80)
+
+IMPR_RESU(identifier='9:1',
+          FORMAT='RESULTAT',
+          RESU=_F(NOM_CHAM=('SIEQ_NOEU', ),
+                  NOM_CMP=('VMIS', 'PRIN_1', 'PRIN_2', 'PRIN_3', 'TRIAX'),
+                  RESULTAT=reslin),
+          UNITE=8)
+
+FIN()
