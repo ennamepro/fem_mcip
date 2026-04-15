@@ -353,3 +353,9 @@ conda install conda-forge::code-aster=17.0.1
 conda install spyder=6.0.7
 pip install gmsh==4.13.1
 ```
+### ### ### ### ###
+Final note
+### ### ### ### ###
+
+This repository is part of the project described, among other places, here: https://www.astrj.com/Analysis-of-the-stress-triaxiality-impact-on-the-fatigue-strength-of-a-structural,214338,0,2.html
+
