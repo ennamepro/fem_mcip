@@ -176,7 +176,7 @@ conda activate py311
 spyder round_specimen_a1_stress_concentrator.py
 ```
 
-3.9. Prepare counters which are the radii of the notch and the specimen, and the iteration steps, e.g.:
+3.9.1. Prepare counters which are the radii of the notch and the specimen, and the iteration steps, e.g.:
 
 ```python
 undercut_radius_min = 1.5
@@ -188,7 +188,7 @@ bar_radius_max = 15.0 # max 26.5
 bar_radius_step = 0.5
 ```
 
-3.9.1. Due to possible errors, in the counters:
+3.9.2. Due to possible errors, in the counters:
 
 ```python
 undercut_radius_max = 1.5 # max 12.0
@@ -197,17 +197,17 @@ bar_radius_max = 15.0 # max 26.5
 
 values were adopted that will cause only a single iteration to be performed.
 
-3.10. Place the prepared counters in the run file round_specimen_a1_stress_concentrator.py.
+3.9.3. Place the prepared counters in the run file round_specimen_a1_stress_concentrator.py.
 
-3.11. Call the Run command (F5).
-3.11.1. If no errors appear, change the counter parameters to:
+3.10. Call the Run command (F5).
+3.10.1. If no errors appear, change the counter parameters to:
 
 ```python
 undercut_radius_max = 12.0
 bar_radius_max = 26.5
 ```
 
-3.12. Call the Run command (F5), wait for the program to complete – this may take several hours.
+3.11. Call the Run command (F5), wait for the program to complete – this may take several hours.
 
 ### ### ### ### ###
 4. Program operation

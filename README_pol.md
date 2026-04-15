@@ -176,7 +176,7 @@ conda activate py311
 spyder round_specimen_a1_stress_concentrator.py
 ```
 
-3.9. Przygotuj liczniki będące promieniami karbu i próbki oraz skoki iteracji np.:
+3.9.1. Przygotuj liczniki będące promieniami karbu i próbki oraz skoki iteracji np.:
 
 ```python
 undercut_radius_min = 1.5
@@ -188,7 +188,7 @@ bar_radius_max = 15.0 # max 26.5
 bar_radius_step = 0.5
 ```
 
-3.9.1. Ze względu na mogące wystąpić błędy, w licznikach:
+3.9.2. Ze względu na mogące wystąpić błędy, w licznikach:
 
 ```python
 undercut_radius_max = 1.5 # max 12.0
@@ -197,17 +197,17 @@ bar_radius_max = 15.0 # max 26.5
 
 przyjęto wartości, które spowodują wykonanie wyłącznie jednej iteracji.
 
-3.10. Przygotowane liczniki umieść w pliku uruchomieniowym round_specimen_a1_stress_concentrator.py
+3.9.3. Przygotowane liczniki umieść w pliku uruchomieniowym round_specimen_a1_stress_concentrator.py
 
-3.11. Wywołaj komendę Run (F5)
-3.11.1. Jeżeli nie pojawią się błędy, zmień parametry liczników, na:
+3.10. Wywołaj komendę Run (F5)
+3.10.1. Jeżeli nie pojawią się błędy, zmień parametry liczników, na:
 
 ```python
 undercut_radius_max = 12.0
 bar_radius_max = 26.5
 ```
 
-3.12. Wywołaj komendę Run (F5), czekaj na wykonanie programu - może to potrwać kilka godzin.
+3.11. Wywołaj komendę Run (F5), czekaj na wykonanie programu - może to potrwać kilka godzin.
 
 ### ### ### ### ###
 4. Działanie programu
