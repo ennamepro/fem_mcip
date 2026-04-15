@@ -357,5 +357,6 @@ pip install gmsh==4.13.1
 Final note
 ### ### ### ### ###
 
-This repository is part of the project described, among other places, here: https://www.astrj.com/Analysis-of-the-stress-triaxiality-impact-on-the-fatigue-strength-of-a-structural,214338,0,2.html
+This repository is part of the project described, among other places, here: https://www.astrj.com/Analysis-of-the-stress-triaxiality-impact-on-the-fatigue-strength-of-a-structural,214338,0,2.html  
 
+If you find it appropriate, please mention in your list of bibliography that you used resources from this repository.

@@ -357,4 +357,6 @@ pip install gmsh==4.13.1
 Uwaga końcowa
 ### ### ### ### ###
 
-To repozytorium jest częścią projektu opisanego między innymi tu: https://www.astrj.com/Analysis-of-the-stress-triaxiality-impact-on-the-fatigue-strength-of-a-structural,214338,0,2.html
+To repozytorium jest częścią projektu opisanego między innymi tu: https://www.astrj.com/Analysis-of-the-stress-triaxiality-impact-on-the-fatigue-strength-of-a-structural,214338,0,2.html  
+
+Jeśli uznasz za stosowne wspomnij w spisie Twoich źródeł o wykorzystaniu zasobów tego repozytorium.
