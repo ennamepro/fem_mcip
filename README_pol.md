@@ -45,7 +45,7 @@ Uwaga: Zaleca się instalację w katalogu np. home/user/apps/salome_914 - zamias
 
 2.5. Zainstaluj Gmsh: https://gmsh.info/bin/Linux/gmsh-4.13.1-Linux64.tgz
 
-Uwaga: Użyto wersji: 4.13.1
+Uwaga: Użyto wersji: 4.13.1.
 Uwaga: Zaleca się instalację w katalogu np. home/user/apps/gmsh_4131 - zamiast ciągu "user" użyj Twoich danych np. "john_smith".
 Uwaga: Do analizy wielokrotnej użyto biblioteki gmsh 4.13.1 z repozytorium pip, patrz załącznik B.
 
@@ -115,7 +115,7 @@ Uwaga: Punkt ten zawiera opis czynności wykonywanych podczas przygotowywania sy
 
 Uwaga: Przykładowe widoki próbek pokazano w round_specimen_a1_salome_all.pdf
 
-3.2. Modeluj próbkę w Salome Platform moduł Geometry. Można skorzystać z wielu materiałów treningowych np. https://docs.salome-platform.org/latest/main/index.html
+3.2. Modeluj próbkę w Salome Platform moduł Geometry. Można skorzystać z wielu materiałów treningowych np. https://docs.salome-platform.org/latest/main/index.html.
 3.2.1. Pamiętaj o utworzeniu grup (physical groups), jak we wzorcu round_specimen_a1_salome_geom_pattern.py.
 3.2.2. Zapisz model w formacie *.brep w katalogu round_specimen_a1_salome_breps.
 3.2.3. Zapisz model jako Dump Study pod wybraną nazwą round_specimen_a1_salome_geom_pattern.py w katalogu głównym elasf_fc.
@@ -128,13 +128,13 @@ Uwaga: Przykładowe widoki próbek pokazano w round_specimen_a1_salome_all.pdf
 3.3.2. Zamień zmienne aktualne np. "15" jako bar radius na `bar_radius`. W pliku round_specimen_a1_salome_geom_pattern.py w miejscach poza definicjami wszystkie parametry aktualne już zamieniono np. na `bar_radius`.
 3.3.4. Zapisz plik round_specimen_a1_salome_geom_pattern.py w katalogu głównym.
 
-3.4. Wygeneruj siatkę korzystając z Gmsh. Możesz skorzystać z wielu materiałów treningowych np. https://gmsh.info/#Documentation
+3.4. Wygeneruj siatkę korzystając z Gmsh. Możesz skorzystać z wielu materiałów treningowych np. https://gmsh.info/#Documentation.
 3.4.1. Pamiętaj o zdefiniowaniu Physical Groups. W pliku round_specimen_a1_stress_concentrator_all.py physical groups są zdefiniowane w funkcji `gmsh_mesher`.
 3.4.2. Zapisz model w formacie *.geo w katalogu głównym. Umożliwi to zdefiniowanie sposobu nakładania siatki w funkcji `gmsh_mesher`. Wykorzystaj do tego metody (parametry podano jako przykładowe):
 `gmsh.model.addPhysicalGroup(2, [3, 18], tag=103)`,
 `gmsh.model.setPhysicalName(2, 103, "Z_0")`.
 
-3.5. Przygotuj analizę w Salome_Meca korzystając z siatki wcześniej przygotowanej. Możesz zastosować materiały treningowe np. https://code-aster.org/spip.php?rubrique68
+3.5. Przygotuj analizę w Salome_Meca korzystając z siatki wcześniej przygotowanej. Możesz zastosować materiały treningowe np. https://code-aster.org/spip.php?rubrique68.
 3.5.1. Do przygotowania analizy może posłużyć plik round_specimen_a1_salome_pattern.comm.
 3.5.2. Po weryfikacji analizy zastosuj plik export do przygotowania szablonu, pliku export_pattern. Plik export winien być w katalogu przygotowanym przez Salome Meca - `nazwa_projektu_Files/RunCase_1/Result-Stage_1`.
 3.5.3. Używany plik export_pattern znajduje się katalogu głównym. Można go wykorzystać do porównania z otrzymanym plikiem export w wyniku analizy FEM. W pliku export_pattern należy zmienić ścieżki dostępu - są one podane w pliku export. Pliki oraz ich parametry muszą pozostać, jak niżej:
@@ -200,9 +200,8 @@ bar_radius_max = 15.0 # max 26.5
 
 przyjęto wartości, które spowodują wykonanie wyłącznie jednej iteracji.
 
-3.9.3. Przygotowane liczniki umieść w pliku uruchomieniowym round_specimen_a1_stress_concentrator.py
-
-3.10. Wywołaj komendę Run (F5)
+3.9.3. Przygotowane liczniki umieść w pliku uruchomieniowym round_specimen_a1_stress_concentrator.py.
+3.10. Wywołaj komendę Run (F5).
 3.10.1. Jeżeli nie pojawią się błędy, zmień parametry liczników, na:
 
 ```python

@@ -201,7 +201,6 @@ bar_radius_max = 15.0 # max 26.5
 values were adopted that will cause only a single iteration to be performed.
 
 3.9.3. Place the prepared counters in the run file round_specimen_a1_stress_concentrator.py.
-
 3.10. Call the Run command (F5).
 3.10.1. If no errors appear, change the counter parameters to:
 
@@ -286,7 +285,6 @@ A.1.4. Install and configure Miniconda according to section 2.2 and Appendix B. 
 A.1.5. Install and configure Salome Platform according to section 2.4.
 A.1.6. Install and configure Gmsh according to section 2.5.
 A.1.7. Install and configure ParaView according to section 2.7.
-
 A.2. Activate the conda environment, e.g. py311.
 
 ```bash
