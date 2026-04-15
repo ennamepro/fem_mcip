@@ -1,5 +1,5 @@
 # fem_mcip
-FEM multiple calculation in pipeline (fem_mcip) using open‑source tools / Multiple FEM analyses using open‑source tools
+FEM multiple calculation in a pipeline (fem_mcip) using open‑source tools / Multiple FEM analyses using open‑source tools
 
 by MJB
 2026-03-21
@@ -113,7 +113,7 @@ Note: This section describes the steps carried out during simulation preparation
 3.1. Model the sample variability in 3D using FreeCAD. Save the sample files in the directory: fcstds.
 3.1.1. As variables in the model of the round specimen with a semicircular notch, the values `bar_radius` and `undercut_radius` were chosen.
 
-Note: Example views of the samples are shown in round_specimen_a1_salome_15_0_26_5_1.pdf.
+Note: Example views of the samples are shown in round_specimen_a1_salome_all.pdf.
 
 3.2. Model the specimen in the Geometry module of Salome Platform. You can use many training materials, e.g. https://docs.salome-platform.org/latest/main/index.html
 3.2.1. Remember to create groups (physical groups), as in the template round_specimen_a1_salome_geom_pattern.py.
@@ -122,9 +122,9 @@ Note: Example views of the samples are shown in round_specimen_a1_salome_15_0_26
 
 3.3. Open the file round_specimen_a1_salome_geom_pattern.py in an editor, e.g. Kate.
 3.3.1. In the file, prepare variables for the current parameters, see the file round_specimen_a1_salome_geom_pattern.py:
-3.3.1.1. X_length = X_length_pattern (not required)
-3.3.1.2. bar_radius = bar_radius_pattern
-3.3.1.3. undercut_radius = undercut_radius_pattern
+3.3.1.1. `X_length = X_length_pattern` (not required)
+3.3.1.2. `bar_radius = bar_radius_pattern`
+3.3.1.3. `undercut_radius = undercut_radius_pattern`
 3.3.2. Replace the current variables, e.g. "15" as the bar radius, with `bar_radius`. In the file round_specimen_a1_salome_geom_pattern.py, in places outside the definitions, all current parameters have already been replaced, e.g. with `bar_radius`.
 3.3.4. Save the file round_specimen_a1_salome_geom_pattern.py in the main directory.
 
@@ -148,6 +148,9 @@ Note: Example views of the samples are shown in round_specimen_a1_salome_15_0_26
 Note: Instead of the string "user", use your own data, e.g. "john_smith".
 
 3.6. Prepare a comm file based on which Code_Aster will perform the FEM analyses. You can use the template round_specimen_a1_salome_pattern.comm. In it, a string `PRES=-X.XX` has been prepared, which will be changed to a numerical value of the pressure that constitutes the tensile force in the bar. The remaining parameters of your simulation are contained in the comm file in the directory `project_name_Files/RunCase_1/Result-Stage_1`.
+
+Note: Example view of the boundary conditions is shown in round_specimen_a1_salome_bc.pdf.
+
 3.6.1. Note that the analysis uses reduced HMH stresses (Huber, Mises, Hencky), principal stresses 1, 2, 3, and the stress state triaxiality. Therefore, in the results the following were marked: `NOM_CMP=('VMIS', 'PRIN_1', 'PRIN_2', 'PRIN_3', 'TRIAX')`. In other works, you can change the recorded quantities.
 
 3.7. Using ParaView, you can prepare a visualization of the calculation results. For this purpose, use the rmed file from the FEM calculations.
@@ -160,7 +163,7 @@ Note: Instead of the string "user", use your own data, e.g. "john_smith".
 LoadPlugin('MEDReader', remote=False, ns=globals())
 ```
 
-This will add the requirement to load the MED format translator. This is necessary because the Tools/Stop Trace command generates a Python script, but does not add the requirement to load the MEDReader plugin.
+this will add the requirement to load the MED format translator. This is necessary because the Tools/Stop Trace command generates a Python script, but does not add the requirement to load the MEDReader plugin.
 
 3.7.5. Visualization of results in ParaView requires preparing an appropriate template. For this purpose, you can use the file round_specimen_a1_salome_pview_pattern.py.
 
