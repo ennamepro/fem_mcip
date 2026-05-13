@@ -1,12 +1,13 @@
 # fem_mcip
+
 FEM multiple calculation in a pipeline (fem_mcip) using open‑source tools / Multiple FEM analyses using open‑source tools
 
-by MJB
+by MJB  
 2026-03-21
 
 Note: If you are only interested in running the fem_mcip calculations, go to Appendix A.  
-Note: bash ... means that you should use the bash shell.  
-Note: python ... means a part of a program written in the Python language.
+Note: ```bash ...``` means that you should use the bash shell.  
+Note: ```python ...``` means a part of a program written in the Python language.
 
 ### ### ### ### ###
 1. Definition of task and objective
@@ -35,7 +36,7 @@ Note: A detailed description of the installation and configuration of the Minico
 2.3. Install FreeCAD: https://www.freecad.org/downloads.php?lang=en
 
 Note: Version used: 1.0.  
-Note: It is recommended to use version 1.1 in the AppImage package: https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.0  
+Note: It is recommended to use version 1.1 in the AppImage package: https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.0.  
 Note: It is recommended to install the package in a directory, e.g. home/user/apps/freecad_11 – instead of the string "user", use your own data, e.g. "john_smith".
 
 2.4. Install Salome Platform: https://www.salome-platform.org/?page_id=2430
@@ -89,7 +90,7 @@ sudo apt install git
 git clone https://github.com/ennamepro/fem_mcip.git
 ```
 
-2.10. If you do not want to use Git, you can manually create all the required directories, e.g. with the command `md base-stage1s`.  
+2.10. If you do not want to use git, you can manually create all the required directories, e.g. with the command `md base-stage1s`.
 2.10.1. base-stage1s  
 2.10.2. exports  
 2.10.3. round_specimen_a1_salome_breps  

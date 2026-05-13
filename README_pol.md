@@ -1,12 +1,13 @@
 # fem_mcip
+
 FEM multiple calculation in pipeline (fem_mcip) using opensource tools / Wielokrotne analizy MES z użyciem narzędzi o otwartym źródle
 
-by MJB
+by MJB  
 2026-03-21
 
 Uwaga: Jeżeli jesteś zainteresowana/y wyłącznie uruchomieniem obliczeń fem_mcip, to przejdź do załącznika A.  
 Uwaga: ```bash ...``` oznacza by skorzystać z powłoki bash.  
-Uwaga: ```python ...``` oznacza część programy w języku Python.
+Uwaga: ```python ...``` oznacza część programu w języku Python.
 
 ### ### ### ### ###
 1. Wyznaczenie zadania i celu
@@ -35,7 +36,7 @@ Uwaga: Szczegółowy opis instalacji i konfiguracji środowiska Miniconda znajdu
 2.3. Zainstaluj FreeCADa: https://www.freecad.org/downloads.php?lang=en
 
 Uwaga: Użyto wersji: 1.0.  
-Uwaga: Zaleca się skorzystanie z wersji 1.1 w paczce AppImage: https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.0  
+Uwaga: Zaleca się skorzystanie z wersji 1.1 w paczce AppImage: https://github.com/FreeCAD/FreeCAD/releases/tag/1.1.0.  
 Uwaga: Zaleca się instalację paczki w katalogu np. home/user/apps/freecad_11 - zamiast ciągu "user" użyj Twoich danych np. "john_smith".
 
 2.4. Zainstaluj Salome Platform: https://www.salome-platform.org/?page_id=2430
@@ -89,7 +90,7 @@ sudo apt install git
 git clone https://github.com/ennamepro/fem_mcip.git
 ```
 
-2.10. Jeżeli nie chcesz korzystać z Git, możesz ręcznie przygotować wszystkie wymagane katalogi np. poleceniem `md base-stage1s`.  
+2.10. Jeżeli nie chcesz korzystać z gita, możesz ręcznie przygotować wszystkie wymagane katalogi np. poleceniem `md base-stage1s`.
 2.10.1. base-stage1s  
 2.10.2. exports  
 2.10.3. round_specimen_a1_salome_breps  
